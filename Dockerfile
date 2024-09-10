@@ -1,6 +1,9 @@
-FROM node:16-alpine
+FROM n8nio/n8n:latest
 
-ARG N8N_VERSION=0.228.2
+ARG N8N_VERSION=1.58.0
+ARG ENCRYPTIONKEY
+
+ENV N8N_ENCRYPTION_KEY=$ENCRYPTIONKEY
 
 RUN apk add --update graphicsmagick tzdata
 
